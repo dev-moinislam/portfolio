@@ -9,7 +9,7 @@ const ContactForm = () => {
             Write me your project
           </Typography>
           <Box sx={{ display: 'flex', flexDirection: 'column', justifyContent: 'center', gap: 5 }}>
-          <Card sx={{ minWidth: '320px', textAlign: 'center',p:5 }}>
+          <Card sx={{ minWidth: '320px', textAlign: 'center',p:3 }}>
                     <CardContent>
                     <Box
                         component="form"
