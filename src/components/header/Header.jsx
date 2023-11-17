@@ -150,6 +150,7 @@ const Header = () => {
                                     component={Link}
                                     key={index}
                                     to={page.path}
+                                    onClick={handleOpenNavMenu}
                                     sx={{ color: location.pathname === `${page.path}` ? 'GrayText' : 'black',fontFamily: 'Poppins',fontWeight:400,textTransform:'none',fontSize:'14px',gap:'5px'}}
                                 >
                                     {page.icon} {page.label}
