@@ -87,8 +87,8 @@ const About = () => {
                   bgcolor: 'GrayText',
                 }
               }} 
-              href="/MD_MOIN_ISLAM_Resume.pdf"
-              download="MD_MOIN_ISLAM_Resume.pdf" 
+              // href="/MD_MOIN_ISLAM_Resume.pdf"
+              // download="MD_MOIN_ISLAM_Resume.pdf" 
             >
               Download Resume
             </Button>

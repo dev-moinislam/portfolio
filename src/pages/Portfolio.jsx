@@ -1,22 +1,23 @@
 import React from 'react';
-import { Avatar, Box, Button, ButtonGroup, Card, CardContent, Grid, Typography } from '@mui/material';
+import { Avatar, Box, Button, ButtonGroup, Card, CardContent, Grid, Typography, Link } from '@mui/material';
 import { useState } from 'react';
 import { TbWorldWww } from "react-icons/tb";
 import { IoLogoGithub } from "react-icons/io5";
 import { FaMarkdown } from "react-icons/fa";
 
 const projects = [
-  { id: 1, title: 'URL Shortener', img: 'url.png', categories: ['ReactJs'] },
-  { id: 2, title: 'Blood Bank', img: 'bloodBank.png', categories: ['NextJs', 'Full-Stack'] },
-  { id: 3, title: 'VidShare', img: 'vidShare.png', categories: ['ReactJs', 'Full-Stack'] },
-  { id: 4, title: 'WishperWave - Chat App', img: 'wishperWave.png', categories: ['NextJs', 'Full-Stack'] },
-  { id: 5, title: 'Portfolio', img: 'portfolioimg.png', categories: ['ReactJs'] },
+  { id: 1, title: 'URL Shortener', img: 'url.png', categories: ['ReactJs'], livelink: "https://shortify-link.vercel.app/", details: "https://github.com/dev-moinislam/URL-Shortener/blob/master/README.md", frontendGithubLink: "https://github.com/dev-moinislam/URL-Shortener.git", backendGithubLink: "" },
+  { id: 2, title: 'Blood Bank', img: 'bloodBank.png', categories: ['NextJs', 'Full-Stack'], livelink: "https://blood-donation-management.onrender.com/init", details: "https://github.com/dev-moinislam/fullstack-nextjs-blood-bank/blob/master/README.md", frontendGithubLink: "https://github.com/dev-moinislam/fullstack-nextjs-blood-bank.git", backendGithubLink: "" },
+  { id: 3, title: 'VidShare', img: 'vidShare.png', categories: ['ReactJs', 'Full-Stack'], livelink: "https://vid-share.vercel.app/", details: "https://github.com/dev-moinislam/VideoShare/blob/master/README.md", frontendGithubLink: "https://github.com/dev-moinislam/VideoShare.git", backendGithubLink: "" },
+  { id: 4, title: 'WishperWave - Chat App', img: 'wishperWave.png', categories: ['NextJs', 'Full-Stack'], livelink: "https://wishper-wave.vercel.app/", details: "https://github.com/dev-moinislam/wishper-wave-frontend/blob/master/README.md", frontendGithubLink: "https://github.com/dev-moinislam/wishper-wave-frontend.git", backendGithubLink: "https://github.com/dev-moinislam/wishper-wave-backend.git" },
+  { id: 5, title: 'Portfolio', img: 'portfolioimg.png', categories: ['ReactJs'], livelink: "https://dev-moin.vercel.app/", details: "https://github.com/dev-moinislam/portfolio/blob/master/README.md", frontendGithubLink: "https://github.com/dev-moinislam/portfolio.git", backendGithubLink: "" },
 ];
 
 const icons = [
-  { id: 1, icon: <TbWorldWww />, color: '#7dc5f5' },
-  { id: 2, icon: <IoLogoGithub />, color: 'black' },
-  { id: 3, icon: <FaMarkdown />, color: '#767674' },
+  { id: 1, icon: <TbWorldWww />, color: '#7dc5f5', label: "Live", key: "livelink" },
+  { id: 2, icon: <FaMarkdown />, color: '#767674', label: "Details", key: "details" },
+  { id: 3, icon: <IoLogoGithub />, color: 'black', label: "Frontend", key: "frontendGithubLink" },
+  { id: 4, icon: <IoLogoGithub />, color: 'black', label: "Backend", key: "backendGithubLink" },
 ];
 
 const Portfolio = () => {
@@ -44,7 +45,7 @@ const Portfolio = () => {
         </Typography>
       </Box>
       <Box sx={{ flexGrow: 1, display: 'flex', justifyContent: 'center', mb: 3 }}>
-        <ButtonGroup sx={{px:1}}>
+        <ButtonGroup sx={{ px: 1 }}>
           <Button
             sx={{
               fontSize: '12px',
@@ -95,11 +96,13 @@ const Portfolio = () => {
               </Box>
               <Grid container spacing={2}>
                 {icons.map((iconSymbol) => (
-                  <Grid item xs={4} key={iconSymbol.id} sx={{ display: 'flex', justifyContent: 'center' }}>
-                    <Box sx={{ fontSize: 24, color: iconSymbol.color, cursor: 'pointer' }}>
-                      {iconSymbol.icon}
-                    </Box>
-                  </Grid>
+                  project[iconSymbol.key] && (
+                    <Grid item xs={6} key={iconSymbol.id} sx={{ display: 'flex', justifyContent: 'center' }}>
+                      <Box component={Link} href={project[iconSymbol.key]} target='_blank' sx={{ fontSize: 20, color: iconSymbol.color, cursor: 'pointer', display: 'flex', gap: 1, px: 4 }}>
+                        {iconSymbol.icon} <span style={{ fontSize: 13 }}>{iconSymbol.label}</span>
+                      </Box>
+                    </Grid>
+                  )
                 ))}
               </Grid>
             </CardContent>
