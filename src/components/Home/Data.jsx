@@ -28,15 +28,15 @@ const Data = () => {
 /* ----------------------------- End of typed js ---------------------------- */
 
   return (
-    <Box sx={{ flexGrow: 1 }}>
+    <Box sx={{ flexGrow: 1 ,display:'flex',justifyContent:'center',alignItems:'center'}}>
     <Grid container spacing={2}>
-      <Grid item xs={3}>
+      <Grid item xs={2}>
         <Social/>
       </Grid>
-      <Grid item xs={9} >
+      <Grid item xs={10} >
         <Box sx={{ flexGrow: 1}}>
             <Grid container spacing={3} sx={{display:'flex',flexWrap:'wrap-reverse'}}>
-                <Box sx={{height:'100vh',width:'100vw',display:'flex',flexDirection:'row',flexWrap:'wrap-reverse',justifyContent:'flex-start',alignItems:'center',mt:2 }}>
+                <Box sx={{height:'100vh',width:'100vw',display:'flex',flexDirection:'row',flexWrap:'wrap-reverse',justifyContent:'center',alignItems:'center',mt:2 }}>
                     <Box sx={{maxWidth:'500px'}} >
                         <CardContent sx={{ letterSpacing:'.2rem',fontFamily:'Poppins' }}>
                             <Typography component="div" variant="h3" sx={{letterSpacing:'.2rem',fontFamily:'Poppins',fontWeight:{xs:'400',sm:'400',md:'600'}}}>

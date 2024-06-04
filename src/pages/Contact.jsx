@@ -8,7 +8,7 @@ import ContactForm from '../components/contact/ContactForm';
 const Contact = () => {
   return (
     <>
-      <Box sx={{ textAlign: 'center', pb: 7,fontFamily:'Poppins' }}>
+      <Box id="contact" sx={{ textAlign: 'center',mb:6,fontFamily:'Poppins' }}>
         <Typography component="div" variant="h4" sx={{ letterSpacing: '.2rem', fontFamily: 'Poppins', fontWeight: { xs: '400', sm: '400', md: '600' } }}>
           Contact Me
         </Typography>

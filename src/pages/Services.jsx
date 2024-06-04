@@ -16,8 +16,8 @@ const services = [
 const Services = () => {
 
   return (
-        <Box sx={{ flexGrow: 1}}>
-              <Box sx={{textAlign:'center',pb:7}}>
+        <Box id="services" sx={{ flexGrow: 1,mt:4}}>
+              <Box sx={{textAlign:'center',mb:7}}>
                 <Typography component="div" variant="h4" sx={{letterSpacing:'.2rem',fontFamily:'Poppins',fontWeight:{xs:'400',sm:'400',md:'600'}}}>
                   Services
                 </Typography>
@@ -25,10 +25,11 @@ const Services = () => {
                   What I offer
                 </Typography>
               </Box>
-                <Box sx={{height:'auto',flexGrow:1,width:'100vw',display:'flex',flexDirection:'row',flexWrap:'wrap',justifyContent:'space-evenly',alignItems:'center',pb:20,gap:'1px' }}>
+                <Box sx={{display:'flex',justifyContent:'center',alignItems:'center'}}>
+                <Box sx={{maxWidth:"800px",display:'flex',flexDirection:'row',flexWrap:'wrap',justifyContent:'center',gap:'25px' }}>
                 {services.map((page, index) => (
-                  <Box sx={{maxWidth:"400px"}} key={index}>
-                    <Card sx={{ width: 350 ,mb:{xs:9},height:'200px'}}>
+                  <Box sx={{width:"350px"}} key={index}>
+                    <Card sx={{ width: 350 ,mb:{xs:3},height:'200px'}}>
                       <CardActionArea sx={{height:'200px'}}>
                         <CardContent>
                           <>
@@ -36,7 +37,7 @@ const Services = () => {
                                 {page.label}
                               </Typography>
                              <Grid container columnSpacing={{ xs: 1, sm: 2, md: 3 }}>
-                                <Box sx={{display:'flex',justifyContent:'center',alignItems:'center',maxWidth:'350px'}}>
+                                <Box sx={{display:'flex',justifyContent:'center',alignItems:'center',width:'350px'}}>
                                   <Grid item xs={10} sx={{}}>
                                     {page.des}
                                   </Grid>
@@ -48,6 +49,7 @@ const Services = () => {
                     </Card>
                   </Box> 
                   ))}
+                </Box>
                 </Box>
         </Box>
   )

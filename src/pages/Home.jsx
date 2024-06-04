@@ -4,7 +4,7 @@ import { Box } from '@mui/material'
 
 const Home = () => {
   return (
-      <Box sx={{height:'100%'}}>
+      <Box id="home" sx={{height:'100%'}}>
         <Data/>
       </Box>
   )

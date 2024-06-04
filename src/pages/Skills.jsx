@@ -78,8 +78,8 @@ const tools = [
 const Skills = () => {
 
   return (
-        <Box sx={{ flexGrow: 1}}>
-              <Box sx={{textAlign:'center',pb:7}}>
+        <Box id="skills" sx={{ flexGrow: 1}}>
+              <Box sx={{textAlign:'center',mb:4}}>
                 <Typography component="div" variant="h4" sx={{letterSpacing:'.2rem',fontFamily:'Poppins',fontWeight:{xs:'400',sm:'400',md:'600'}}}>
                   Skills
                 </Typography>
@@ -87,9 +87,9 @@ const Skills = () => {
                   My Technical Level
                 </Typography>
               </Box>
-                <Box sx={{height:{xs:'100%',md:'100vh'},width:'100vw',display:'flex',flexWrap:'wrap',justifyContent:'space-evenly',alignItems:'center',pb:20,gap:'1px' }}>
+                <Box sx={{width:'100vw',display:'flex',flexWrap:'wrap',justifyContent:'center',alignItems:'center',p:5,gap:{xs:'1px',sm:'20px',md:'40px'} }}>
                   <Box sx={{maxWidth:"400px"}}>
-                    <Card sx={{ width: 350 ,mb:{xs:9},height:'173px'}}>
+                    <Card sx={{ width: 350 ,mb:{xs:5},height:'173px'}}>
                       <CardActionArea>
                         <CardContent>
                           <Typography gutterBottom variant="h5" component="div">
@@ -114,7 +114,7 @@ const Skills = () => {
                     </Card>
                   </Box>
                   <Box sx={{maxWidth:"400px"}}>
-                    <Card sx={{ width: 350 ,mb:{xs:9},height:'173px'}}>
+                    <Card sx={{ width: 350 ,mb:{xs:5},height:'173px'}}>
                       <CardActionArea>
                         <CardContent>
                           <Typography gutterBottom variant="h5" component="div">
@@ -137,7 +137,7 @@ const Skills = () => {
                     </Card>
                   </Box>
                   <Box sx={{maxWidth:"400px"}}>
-                    <Card sx={{ width: 350 ,mb:{xs:9},height:'173px'}}>
+                    <Card sx={{ width: 350 ,mb:{xs:5},height:'173px'}}>
                       <CardActionArea>
                         <CardContent>
                           <Typography gutterBottom variant="h5" component="div">
