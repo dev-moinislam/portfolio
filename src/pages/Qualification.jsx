@@ -120,7 +120,7 @@ const Qualification = () => {
                         <Stepper orientation="vertical" activeStep={-1}>
                             {education.map((step) => (
                                 <Step key={step.label}>
-                                    <StepLabel sx={{ maxWidth:'450px',pr:2  }}>
+                                    <StepLabel sx={{ maxWidth:'400px',pr:2  }}>
                                         <Box sx={{ color: 'black', fontWeight: 'bold' }}>
                                             {step.label}
                                         </Box>
@@ -136,7 +136,7 @@ const Qualification = () => {
                         <Stepper orientation="vertical" activeStep={-1}>
                             {experience.map((step) => (
                                 <Step key={step.label}>
-                                    <StepLabel sx={{ maxWidth:'450px',pr:2 }}>
+                                    <StepLabel sx={{ maxWidth:'400px',pr:2 }}>
                                         <Box sx={{ color: 'black', fontWeight: 'bold' }}>
                                             {step.label}
                                         </Box>
